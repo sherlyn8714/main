@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;  
+    background-image: url(slcv.jpg);
+    
+}
+.container {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: #ebe8e2;
+    padding: 25px;
+    border-radius: 8px;
+}
+.container header{ 
+    font-size: 1.5rem;
+    color: darkblue;
+    font-weight: 500;
+    text-align: center;
+}
+.container .form{
+    margin-top: 30px;
+    text-align: left;
+
+}
+.form .input-box{
+    width: 100%;
+    margin-top: 20px;
+    
+}
+.input-box label{
+    color: darkblue;
+}
+.form :where(.input-box input, .select-box) {
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: darkblue;
+    border: 1px solid green;
+    border-radius: 15px;
+    padding: 0 15px;
+}
+.input-box input:focus{
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0, 1);
+}
+.form .column{
+    column-gap: 15px;
+}
+.form .gender-box{
+    margin-top: 20px
+}
+.gender-box h3{
+    color: darkblue;
+    font-size: 150;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+.form :where(.gender-option, .gender) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+}
+.form .gender {
+    column-gap: 5px;
+}
+.gender input{
+    accent-color:darkblue;
+}
+.form :where(.gender input, .gender label){
+    cursor: pointer;
+} 
+.gender label{
+    color:darkblue;
+}
+.addres :where(input, .select-box) {
+    margin-top: 15px;
+}
+.select-box select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: none;
+    font-size: 1rem;
+}
+.form button {
+    height: 55px ;
+    width: 100%;
+    color: yellow;
+    font-size: 1rem;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 400;
+    transition: all 0.2s ease;
+    background-color:darkblue;
+}
+.form button:hover {
+    background-color: green;
+}
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+    .form .column { 
+        flex-wrap: wrap;
+    }
+     
+    .form :where(.gender-option, .gender) {
+        row-gap: 15px;
+    }
+}
